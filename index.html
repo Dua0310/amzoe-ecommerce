@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+      
+  <!-- Header -->
+  <header>
+    <div class="top-nav">
+      <div class="logo">Amazon</div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search Amazon">
+        <button>🔍</button>
+      </div>
+      <div class="nav-links">
+        <a href="#">Sign In</a>
+        <a href="#">Orders</a>
+        <a href="#">Cart (<span id="cartCount">0</span>)</a>
+
+      </div>
+    </div>
+    <div class="bottom-nav">
+      <a href="#">All</a>
+      <a href="#">Today's Deals</a>
+      <a href="#">Customer Service</a>
+      <a href="#">Registry</a>
+      <a href="#">Gift Cards</a>
+      <a href="#">Sell</a>
+    </div>
+    <!-- Add this inside <body>, maybe in header or nav -->
+<button id="darkModeToggle">Toggle Dark Mode</button>
+
+  
+
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Amazon</h1>
+    <p>Shop the best deals of the season</p>
+  </section>
+    <!-- Categories Section -->
+    
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+   
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('shoes')">Shoes</button>
+    <button onclick="filterProducts('juice')">Juice</button>
+    <button onclick="filterProducts('watch')">Watches</button>
+    <button onclick="filterProducts('bag')">Bags</button>
+    <button onclick="filterProducts('electronics')">Electronics</button>
+    <button onclick="filterProducts('fashion')">Fashion</button>
+  </div>
+</div>
+</section>
+  
+<!-- Products Section -->
+<section class="products">
+    <h2>Popular Products</h2>
+    <div class="product-grid">
+     <!-- Product 1 -->
+<div class="product-card" data-category="shoes">
+    <img src="1.png" alt="Shoes">
+    <p>Running Shoes</p>
+    <p>$99.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 2 -->
+  <div class="product-card" data-category="juice">
+    <img src="2.png" alt="Juice">
+    <p>Orange Juice</p>
+    <p>$4.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 3 -->
+  <div class="product-card" data-category="watch">
+    <img src="3.png" alt="Watch">
+    <p>Smart Watch</p>
+    <p>$149.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 4 -->
+  <div class="product-card" data-category="bag">
+    <img src="4.png" alt="Bag">
+    <p>Leather Bag</p>
+    <p>$79.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 5 -->
+  <div class="product-card" data-category="electronics">
+    <img src="5.png" alt="Headphones">
+    <p>Wireless Headphones</p>
+    <p>$59.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 6 -->
+  <div class="product-card" data-category="fashion">
+    <img src="6.png" alt="Sunglasses">
+    <p>Stylish Sunglasses</p>
+    <p>$29.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 7 -->
+  <div class="product-card" data-category="fashion">
+    <img src="7.png" alt="Perfume">
+    <p>Perfume</p>
+    <p>$39.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 8 -->
+  <div class="product-card" data-category="fashion">
+    <img src="8.png" alt="Shirt">
+    <p>Men's Shirt</p>
+    <p>$24.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 9 -->
+  <div class="product-card" data-category="electronics">
+    <img src="9.png" alt="Laptop">
+    <p>Gaming Laptop</p>
+    <p>$999.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 10 -->
+  <div class="product-card" data-category="electronics">
+    <img src="10.png" alt="Phone">
+    <p>Smartphone</p>
+    <p>$699.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 11 -->
+  <div class="product-card" data-category="shoes">
+    <img src="11.png" alt="Shoes">
+    <p>Formal Shoes</p>
+    <p>$89.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 12 -->
+  <div class="product-card" data-category="bag">
+    <img src="12.png" alt="Bag">
+    <p>Backpack</p>
+    <p>$49.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 13 -->
+  <div class="product-card" data-category="juice">
+    <img src="14.png" alt="Juice">
+    <p>Apple Juice</p>
+    <p>$3.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 14 -->
+  <div class="product-card" data-category="watch">
+    <img src="15.png" alt="Watch">
+    <p>Luxury Watch</p>
+    <p>$199.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 15 -->
+  <div class="product-card" data-category="electronics">
+    <img src="15.png" alt="Headphones">
+    <p>Noise Cancelling Headphones</p>
+    <p>$79.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 16 -->
+  <div class="product-card" data-category="electronics">
+    <img src="16.png" alt="Camera">
+    <p>Digital Camera</p>
+    <p>$549.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 17 -->
+  <div class="product-card" data-category="fashion">
+    <img src="17.png" alt="Shirt">
+    <p>Women's Blouse</p>
+    <p>$34.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 18 -->
+  <div class="product-card" data-category="fashion">
+    <img src="18.png" alt="Perfume">
+    <p>Men's Cologne</p>
+    <p>$44.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 19 -->
+  <div class="product-card" data-category="fashion">
+    <img src="19.png" alt="Sunglasses">
+    <p>Polarized Sunglasses</p>
+    <p>$34.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+  <!-- Product 20 -->
+  <div class="product-card" data-category="shoes">
+    <img src="20.png" alt="Shoes">
+    <p>Kids' Sports Shoes</p>
+    <p>$39.99</p>
+    <button>Add to Cart</button>
+  </div>
+  
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Careers</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Help</a>
+    </div>
+    <p>&copy; 2025 Amazon Clone. All rights reserved.</p>
+  </footer>
+  <script>
+    function filterProducts(category) {
+      const products = document.querySelectorAll('.product-card');
+      products.forEach(product => {
+        const productCategory = product.getAttribute('data-category');
+        if (category === 'all' || productCategory === category) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+    // Dark Mode Toggle
+const toggleBtn = document.getElementById("darkModeToggle");
+
+if (localStorage.getItem("darkMode") === "enabled") {
+  document.body.classList.add("dark-mode");
+}
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  // Save preference
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    localStorage.setItem("darkMode", "disabled");
+  }
+});
+let cartCount = 0;
+const cartCountSpan = document.getElementById('cartCount');
+const addToCartButtons = document.querySelectorAll('.product-card button');
+
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    cartCount++;
+    cartCountSpan.textContent = cartCount;
+  });
+});
+
+
+
+  </script>
+  
+<button id="showAllBtn">Show All</button>
+  
+</body>
+
+</html>
